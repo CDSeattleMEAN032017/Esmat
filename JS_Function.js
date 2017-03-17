@@ -43,3 +43,17 @@ function student(name, age, clas) {
     var myCat2 = CreateCat('bill', 17);
     var myCat3 = CreateCat('someone', 11)
     console.log(myCat2, myCat1, myCat3)
+    console.log("===============================")
+
+
+    function CreateCat(name, age) {
+        this.name = name;
+        this.age = age;
+        }
+    var myCat1 = new CreateCat('fred', 18);
+    myCat1.size = 200;
+    console.log(myCat1)
+
+
+
+    console.log("end")

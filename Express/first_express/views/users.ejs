@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ejs_View</title>
+    </head>
+    <body>
+        <h2>Here are all the users:</h2>
+        <% for (var i = 0; i <users.length; i++){ %>
+            <h3> First Name: <%= users[i].fname %></h3>
+            <h3> Last Name: <%= users[i].lname %></h3>
+            <h3> Email: <%= users[i].email %></h3>
+            <hr>
+        <% } %>
+    </body>
+</html>

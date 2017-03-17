@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ViewPage</title>
+    </head>
+    <body>
+        <h2>This is view page </h2>
+            <table border = "1">
+                <tr>
+                    <th>Name</th><br>
+                    <th>Aage</th><br>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+                <% for(cat in cats){%>
+                    <tr>
+
+                    <td><%= cats[cat] ['name'] %></td>
+                    <td><%= cats[cat] ['age'] %></td>
+                    <td><a href="/cat/delete/<%=cats[cat]["_id"]%>">Delete</a></td>
+                    <td><a href="/cat/edit/<%=cats[cat]["_id"]%>">Edit</a></td>
+
+                </tr>
+                    <%}%>
+            </table>
+            <hr>
+        <form action="/cat/add" method="post">
+            <input type="text" name="name" placeholder="Enter a name for cat"><br>
+            <input type="number" name="age" placeholder="Enter age of cat"><br>
+            <input type="submit" name="button" value="Submit"><br>
+        </form>
+
+    </body>
+</html>
